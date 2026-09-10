@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CodeShield JavaScript protection and obfuscation toolkit">
+<title>CodeShield — Yanzy Theme</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">CODESHIELD</a>
+  <span class="status">LOCAL</span>
+</header>
+
+<main class="container">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">JAVASCRIPT OBFUSCATOR</p>
+    <h1>Protect code.<br><span>Keep running.</span></h1>
+    <p class="lead">Obfuscate JavaScript lindungi code mu agar tidak terlihat seseorang dan agar tidak di ambil</p>
+  </div>
+</section>
+
+<section class="workspace">
+  <div class="panel upload-panel">
+    <div class="panel-head"><div><p class="kicker">01</p><h2>Source file</h2></div><div id="fileState" class="mini-state">WAITING</div></div>
+    <label class="dropzone" id="dropzone">
+      <input id="fileInput" type="file" accept=".js,.mjs,.cjs,text/javascript">
+      <div class="drop-title">Drop JavaScript</div>
+      <div class="drop-sub">.js · .mjs · .cjs</div>
+    </label>
+    <div class="file-info" id="fileInfo"></div>
+    <label class="dropzone" id="htmlDropzone">
+      <input id="htmlFileInput" type="file" accept=".html,.htm,text/html">
+      <div class="drop-title">Drop HTML</div>
+      <div class="drop-sub">.html · .htm</div>
+    </label>
+    <div class="file-info" id="htmlFileInfo"></div>
+  </div>
+
+  <div class="panel settings-panel">
+    <div class="panel-head"><div><p class="kicker">02</p><h2>Protection</h2></div><div class="mini-state">CLIENT SIDE</div></div>
+    <div class="mode-grid">
+      <button class="mode active" data-mode="standard"><b>Standard</b><span>Encoded wrapper</span></button>
+      <button class="mode" data-mode="china"><b>China</b><span>Chinese identifiers</span></button>
+      <button class="mode" data-mode="invisible"><b>Invisible</b><span>Zero-width layer</span></button>
+      <button class="mode" data-mode="strong"><b>Layered</b><span>Multi-layer encoding</span></button>
+    </div>
+    <div class="size-title"><span>Output size</span><span id="targetState">TARGET 200 KB</span></div>
+    <div class="size-grid">
+      <button class="size-choice active" data-kb="200">200 KB</button>
+      <button class="size-choice" data-kb="500">500 KB</button>
+    </div>
+    <div class="switch-row">
+      <label><span>Minify</span><input id="minify" type="checkbox" checked><i></i></label>
+      <label><span>Comments</span><input id="comments" type="checkbox" checked><i></i></label>
+    </div>
+  </div>
+
+  <div class="panel action-panel">
+    <div class="panel-head"><div><p class="kicker">03</p><h2>Build</h2></div><div id="modeState" class="mini-state">STANDARD</div></div>
+    <div class="action-row"><button id="protectBtn" class="primary">Protect</button><button id="downloadBtn" class="secondary" disabled>Download</button></div>
+    <div class="meter"><span id="meterBar"></span></div>
+    <p id="resultText" class="result-text">Select a JavaScript file to begin.</p>
+  </div>
+
+  <div class="panel preview-panel">
+    <div class="panel-head"><div><p class="kicker">04</p><h2>Preview</h2></div><div id="sizeState" class="mini-state">0 B</div></div>
+    <pre id="output"><code>Select a file and run protection.</code></pre>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><span>01</span><h3>Theme matched</h3><p>Visual system adapted from the supplied theme.</p></div>
+  <div class="feature"><span>02</span><h3>200 / 500 KB</h3><p>Optional inert padding controls generated file size.</p></div>
+  <div class="feature"><span>03</span><h3>Local</h3><p>Source processing stays in the browser.</p></div>
+  <div class="feature"><span>04</span><h3>Multi-mode</h3><p>Standard, China, Invisible and Layered modes.</p></div>
+</section>
+
+<section class="notice">
+  <div class="notice-title">NOTE</div>
+  <p>Obfuscation is not encryption. If JavaScript executes on a machine, a determined user can inspect it. Padding also does not prevent renaming.</p>
+</section>
+</main>
+<footer>CodeShield · 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>
